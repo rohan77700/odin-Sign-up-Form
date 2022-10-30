@@ -1,0 +1,233 @@
+@font-face {
+    font-family: Norse;
+    src: url('Norse-Bold.otf');
+}
+
+@font-face {
+    font-family: Norse;
+    font-weight: bold;
+    src: url('Norse-Bold.otf');
+}
+
+:root {
+    --primary-yellow: #ffe100;
+    --bg: #333;
+    --button: #596D48;
+    --input: #E5E7EB;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 80%;
+    height: 700px;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    background: url(https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7885.jpg?w=2000) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+}
+
+.logo {
+    display: flex;
+    height: 100px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    color: var(--white);
+    font-family: Norse;
+    font-size: 3rem;
+}
+
+.logo img {
+    max-height: 100%;
+    padding: 0 10px;
+}
+
+main {
+    height: 100%;
+    max-width: 50%;
+    background-color: var(--primary-yellow);
+}
+
+.description {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 33%;
+    justify-content: space-around;
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 90%;
+}
+
+form {
+    height: 80%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin-bottom: 3rem;
+    padding: 2rem   ;
+    background-color: var(--white);
+    box-shadow: 0 3px 5px -2px rgba(0, 0, 0, .5);
+    justify-content: space-around;
+}
+
+.form-container p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+fieldset {
+    display: flex;
+    border: none;
+    gap: 5rem;
+}
+
+.form-cell {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-cell label {
+    padding-top: 10px;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+form input {
+    margin-top: 10px;
+    padding: 7px;
+    border: 1px solid var(--input);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid #0000ff;
+}
+
+#error {
+    margin-top: 5px;
+    color: #ff0000;
+    font-size: 10px; 
+}
+
+.button-area {
+    padding-left: 2rem;
+}
+
+.button-area a {
+    color: var(--button);
+    text-decoration: none;
+}
+
+button {
+    margin-bottom: 2rem;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--button);
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--button);
+}
+
+
+/* responsive */
+
+@media (max-width: 991px) {
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 50%;
+    }
+    
+    main {
+        max-width: 50%;
+    }
+
+    .form-container {
+        padding: 2rem 1rem;
+    }
+
+    fieldset {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column; 
+        height: 92vh;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+    
+    main {
+        max-width: 100%;
+        height: 100vh;
+    }   
+}
+
+@media (max-width: 415px) {
+    .wrapper {
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    main {
+        max-width: 100%;
+        height: 100vh;
+    }   
+
+    .form-cell {
+        width: 40%;
+    }
+}
+
+@media (max-width: 376px) {
+    .wrapper {
+        height: 110vh;
+    }
+    
+    main {
+        max-width: 100%;
+        height: 100vh;
+    }   
+}
